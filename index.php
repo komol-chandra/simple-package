@@ -1,7 +1,7 @@
 <?php
 
 use App\Collections;
-
+//komol
 require __DIR__ . "/vendor/autoload.php";
 
 $data = [
