@@ -1,0 +1,17 @@
+{
+    "name": "kiri2ka/package",
+    "description": "A simple package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "komol-chandra",
+            "email": "kiri2kaofficial@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\":"src/"
+        }
+    },
+    "require": {}
+}
