@@ -1,7 +1,7 @@
 <?php
 
-use App\Collections;
-//komol
+use App\Services\ArrayParseService;
+
 require __DIR__ . "/vendor/autoload.php";
 
 $data = [
@@ -43,7 +43,5 @@ $data = [
 
 ];
 
-$return_data = (new Collections($data))->filter(function ($key, $value) {
-    return $value['status'] === 1;
-})->toJason();
+$return_data = ArrayParseService::make($data)->toJason();
 print_r($return_data);
