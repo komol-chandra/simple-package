@@ -43,5 +43,5 @@ $data = [
 
 ];
 
-$return_data = ArrayParseService::make($data)->toJason();
+$return_data = ArrayParseService::make($data)->toArray();
 print_r($return_data);

@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use App\Contracts\ArrayParseContract;
@@ -15,6 +16,7 @@ class ArrayParseService implements ArrayParseContract
     /**
      * init array value
      * $data is array for all operation
+     * @param array $data
      */
     public function __construct(array $data)
     {
@@ -24,6 +26,7 @@ class ArrayParseService implements ArrayParseContract
     /**
      * Initialize array
      *
+     * @param array $data
      * @return ArrayParseContract
      */
 
@@ -42,7 +45,7 @@ class ArrayParseService implements ArrayParseContract
 
     public function where(string $index, string $value): ArrayParseContract
     {
-
+        //
     }
 
     /**
@@ -54,24 +57,25 @@ class ArrayParseService implements ArrayParseContract
      */
     public function whereIn(string $index, string $value): ArrayParseContract
     {
-
+        //
     }
 
     /**
-     *
+     * @param string $index
+     * @param string $result
+     * @return ArrayParseContract
      */
     public function orderBy(string $index, string $result = "ASC"): ArrayParseContract
     {
-
+        //
     }
 
     /**
-     * @return the object
-     * @return ArrayParseContract
+     * @return ArrayParseContract object
      */
     public function get(): ArrayParseContract
     {
-
+        return $this;
     }
 
     /**
@@ -80,12 +84,12 @@ class ArrayParseService implements ArrayParseContract
      */
     public function toArray(): array
     {
-
+        return (array)$this->data;
     }
 
     /**
-     * return data in json formate
-     * @return object
+     * return data in json format
+     * @return false|object|string
      */
     public function toJson()
     {
@@ -94,10 +98,10 @@ class ArrayParseService implements ArrayParseContract
 
     /**
      * return the first row from the array
-     * @return in array formate
+     * @return array array format
      */
     public function first(): array
     {
-
+        return (array)$this->data[0];
     }
 }

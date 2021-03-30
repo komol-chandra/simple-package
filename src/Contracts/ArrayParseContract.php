@@ -6,6 +6,7 @@ interface ArrayParseContract
     /**
      * Initialize array
      *
+     * @param array $data
      * @return ArrayParseContract
      */
 
@@ -31,13 +32,14 @@ interface ArrayParseContract
     public function whereIn(string $index, string $value): ArrayParseContract;
 
     /**
-     *
+     * @param string $index
+     * @param string $result
+     * @return ArrayParseContract
      */
     public function orderBy(string $index, string $result = "ASC"): ArrayParseContract;
 
     /**
-     * @return the object
-     * @return ArrayParseContract
+     * @return ArrayParseContract object
      */
     public function get(): ArrayParseContract;
 
@@ -48,14 +50,14 @@ interface ArrayParseContract
     public function toArray(): array;
 
     /**
-     * return data in json formate
+     * return data in json format
      * @return object
      */
     public function toJson();
 
     /**
      * return the first row from the array
-     * @return in array formate
+     * @return array array format
      */
     public function first(): array;
 }
